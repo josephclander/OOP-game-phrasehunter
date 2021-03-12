@@ -20,4 +20,27 @@ class Phrase {
     }
     display.innerHTML = text;
   }
+
+  /**
+   * Checks if passed letter is in phrase
+   * @param (string) letter - Letter to check
+   */
+  checkLetter(letter) {
+    for (let character of this.phrase) {
+      if (letter === character) return true;
+    }
+    return false;
+  }
+
+  /**
+   * Displays passed letter on screen after a match is found
+   * @param (string) letter - Letter to display
+   */
+  showMatchedLetter(letter) {
+    const matches = document.querySelectorAll(`.${letter}`);
+    matches.forEach((match) => {
+      match.classList.remove('hide');
+      match.classList.add('show');
+    });
+  }
 }
