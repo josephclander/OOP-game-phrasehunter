@@ -61,6 +61,7 @@ class Game {
     const tries = document.querySelectorAll('.tries');
     const lifeToRemove = this.missed;
     tries[lifeToRemove].firstElementChild.src = 'images/lostheart.png';
+    tries[lifeToRemove].firstElementChild.alt = 'Empty Heart Icon';
     this.missed = this.missed + 1;
     if (this.missed === 5) this.gameOver(false);
   }
