@@ -91,10 +91,13 @@ class Game {
    * Resets the game board and missed count
    */
   gameReset() {
+    const background = document.querySelector('.main-container');
     const phrase = document.querySelector('#phrase ul');
     const keys = document.querySelectorAll('.key');
     const hearts = document.querySelectorAll('.tries img');
     const startButton = document.querySelector('#btn__reset');
+    // reset background to white;
+    background.style.backgroundColor = '#ffffff';
     // remove li from ul
     phrase.textContent = null;
     // reset key classes to key remove chosen, wrong and disabled
@@ -128,6 +131,8 @@ class Game {
     } else {
       button.classList.add('wrong');
       this.removeLife();
+      const background = document.querySelector('.main-container');
+      if (this.missed === 4) background.style.backgroundColor = '#fb7878';
     }
   }
 }

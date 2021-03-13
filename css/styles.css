@@ -30,6 +30,11 @@ body {
   height: 100vh;
 }
 
+/* Added styles */
+.main-container {
+  transition: background-color 0.2s ease-in-out;
+}
+
 li,
 ol,
 ul {
