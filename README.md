@@ -98,8 +98,18 @@ In this project, you'll create a browser-based, word guessing game: "Phrase Hunt
 
 ## Browser Testing
 
-[TBC]
+This app has been tested on the following browsers:
+
+- Chrome 89
+- Firefox 87
+- Safari 14.03
+  - the focus for the start button is being pulled away by the browser whether loading in browser or using local server.
 
 ## Notes from the Build
 
-[TBC]
+- Added Styles
+  - When the heart images are changed, the alt tag is also updated accordingly. [`game.js removeLife()` & `gameReset()`]
+  - Automatic focus has been given to the start button with custom styling to outline to bring accessibility and uniformity across browsers. You can now more readily start the game with the enter key. Focus is blurred after the game is started. [`app.js`, `game.js gameReset()` & `styles.css #btn__reset`]
+  - A box shadow was added to the start button that mimics being pressed to further improve UX feedback. [`styles.css #btn__reset`]
+  - The onscreen keys have the 1px transparent border change to the stored key text color on hover. [`styles.css button.key:hover`]
+  - The background colour changes to red as a warning when only one life remains. The same transition of 2s ease-in-out was added. The stored root variable wasn't used to improve efficiency by targetting background color only [`Game.js gameReset()` & `handleInteraction()`, `styles.css .main-container`]
