@@ -85,4 +85,23 @@ class Game {
       title.textContent = lose;
     }
   }
+
+  /**
+   * Handles onscreen keyboard button clicks
+   * @param (HTMLButtonElement) button - The clicked button element
+   */
+  handleInteraction(button) {
+    button.setAttribute('disabled', true);
+    const chosenLetter = button.textContent;
+    const isPresent = this.activePhrase.checkLetter(chosenLetter);
+    if (isPresent) {
+      button.classList.add('chosen');
+      this.activePhrase.showMatchedLetter(chosenLetter);
+      const isWinner = this.checkForWin();
+      if (isWinner) this.gameOver(true);
+    } else {
+      button.classList.add('wrong');
+      this.removeLife();
+    }
+  }
 }
