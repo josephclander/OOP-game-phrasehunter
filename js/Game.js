@@ -92,7 +92,7 @@ class Game {
    * Resets the game board and missed count
    */
   gameReset() {
-    const background = document.querySelector('.main-container');
+    const background = document.querySelector('body');
     const phrase = document.querySelector('#phrase ul');
     const keys = document.querySelectorAll('.key');
     const hearts = document.querySelectorAll('.tries img');
@@ -132,7 +132,7 @@ class Game {
     } else {
       button.classList.add('wrong');
       this.removeLife();
-      const background = document.querySelector('.main-container');
+      const background = document.querySelector('body');
       if (this.missed === 4) background.style.backgroundColor = '#fb7878';
     }
   }
