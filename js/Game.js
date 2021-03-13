@@ -94,6 +94,7 @@ class Game {
     const phrase = document.querySelector('#phrase ul');
     const keys = document.querySelectorAll('.key');
     const hearts = document.querySelectorAll('.tries img');
+    const startButton = document.querySelector('#btn__reset');
     // remove li from ul
     phrase.textContent = null;
     // reset key classes to key remove chosen, wrong and disabled
@@ -108,6 +109,7 @@ class Game {
     });
     // reset missed counter
     this.missed = 0;
+    startButton.focus();
   }
 
   /**

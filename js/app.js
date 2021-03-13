@@ -3,7 +3,9 @@
  * app.js */
 
 const game = new Game();
-document.querySelector('#btn__reset').addEventListener('click', function () {
+const startButton = document.querySelector('#btn__reset');
+startButton.focus();
+startButton.addEventListener('click', function () {
   game.startGame();
 });
 
