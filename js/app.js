@@ -19,12 +19,12 @@ document.querySelectorAll('.key').forEach((key) => {
 
 /**
  * Event listener for KEYBOARD keys
- * make response match onscreen keys
+ * make response match onscreen keys with simulated click
  */
 document.addEventListener('keydown', function (event) {
   const keyPressed = event.key;
   const onscreenButtons = document.querySelectorAll('.key');
   onscreenButtons.forEach((button) => {
-    if (button.textContent === keyPressed) game.handleInteraction(button);
+    if (button.textContent === keyPressed) button.click();
   });
 });
