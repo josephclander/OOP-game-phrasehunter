@@ -84,6 +84,30 @@ class Game {
       overlay.classList.add('lose');
       title.textContent = lose;
     }
+    this.gameReset();
+  }
+
+  /**
+   * Resets the game board and missed count
+   */
+  gameReset() {
+    const phrase = document.querySelector('#phrase ul');
+    const keys = document.querySelectorAll('.key');
+    const hearts = document.querySelectorAll('.tries img');
+    // remove li from ul
+    phrase.textContent = null;
+    // reset key classes to key remove chosen, wrong and disabled
+    keys.forEach((key) => {
+      key.classList.remove('chosen', 'wrong');
+      key.removeAttribute('disabled');
+    });
+    // reset all heart images to original
+    hearts.forEach((heart) => {
+      heart.src = 'images/liveheart.png';
+      heart.alt = 'Heart Icon';
+    });
+    // reset missed counter
+    this.missed = 0;
   }
 
   /**
