@@ -65,8 +65,16 @@ button {
 #btn__reset {
   width: 200px;
   margin: 0 auto;
+  /* Added Styles */
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
 }
 
+/* Added Styles */
+#btn__reset:active {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Added Styles */
 #btn__reset:focus {
   outline: 3px solid rgb(134 134 255);
   outline-offset: 12px;
