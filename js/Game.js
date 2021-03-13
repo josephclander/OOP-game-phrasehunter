@@ -76,7 +76,7 @@ class Game {
     const title = document.querySelector('#game-over-message');
     const win = 'You Win!';
     const lose = 'You Lose!';
-    overlay.classList.remove('start');
+    overlay.className = '';
     if (gameWon) {
       overlay.classList.add('win');
       title.textContent = win;
