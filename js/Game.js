@@ -40,6 +40,7 @@ class Game {
     document.querySelector('#overlay').style.display = 'none';
     this.activePhrase = this.getRandomPhrase();
     this.activePhrase.addPhraseToDisplay();
+    document.querySelector('#btn__reset').blur();
   }
 
   /**
