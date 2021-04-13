@@ -61,7 +61,7 @@ class Game {
   removeLife() {
     const tries = document.querySelectorAll('.tries');
     const lifeToRemove = this.missed;
-    tries[lifeToRemove].firstElementChild.src = 'images/lostheart.png';
+    tries[lifeToRemove].firstElementChild.src = 'images/lostHeart.png';
     tries[lifeToRemove].firstElementChild.alt = 'Empty Heart Icon';
     this.missed = this.missed + 1;
     if (this.missed === 5) this.gameOver(false);
@@ -108,7 +108,7 @@ class Game {
     });
     // reset all heart images to original
     hearts.forEach((heart) => {
-      heart.src = 'images/liveheart.png';
+      heart.src = 'images/liveHeart.png';
       heart.alt = 'Heart Icon';
     });
     // reset missed counter
