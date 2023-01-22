@@ -2,6 +2,10 @@
 
 In this project, you'll create a browser-based, word guessing game: "Phrase Hunter." You’ll use JavaScript and OOP (Object-Oriented Programming) to select a random, hidden phrase, which a player tries to guess, by clicking letters on an onscreen keyboard.
 
+## Screenshots
+
+<img width="360" alt="screenshot_1" src="https://user-images.githubusercontent.com/19231569/213939909-2794be72-ed0b-4381-9711-6d76e0594ee9.png"> <img width="360" alt="screenshot_2" src="https://user-images.githubusercontent.com/19231569/213939914-0f3678ab-8d85-42fe-b586-665a27361806.png"> <img width="360" alt="screenshot_3" src="https://user-images.githubusercontent.com/19231569/213939921-2c6924b5-f90b-4632-8f91-970e184689be.png"> <img width="360" alt="screenshot_4" src="https://user-images.githubusercontent.com/19231569/213939928-65fd3a56-1e94-4a52-a786-12ad08743b1c.png">
+
 ## Table of Contents
 
 [Starter Files](#starter-files)
